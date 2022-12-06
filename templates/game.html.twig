@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Jeu Unlock!</title>
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="carte">
+
+{% for card in cards %}
+  <a href="/img/{{card}}.png" target="_blank"><img src="img/{{card}}.png" alt="{{ card }}"></a>
+{% endfor %}
+
+</div>
+<form action="/game/return" method="post">
+<h3>Piocher une carte</h3>
+<label for="cards">Numéro de carte</label>     
+<input class="input" type="text" id="cards" name="numero_card" required
+minlength="1" maxlength="5" size="10">
+<input type="submit" class="btn btn-success"value="Valider">
+</form>
+<form action="/game/discard" method="post">
+<label for="discard">Défausse</label>
+<input class="input" type="text" id="discard" name="discard" required
+minlength="1" maxlength="5" size="10">
+<input type="submit" class="btn btn-success" value="Confirmer défausse">
+</form>
+
+<form action="/game/combine" method="post">
+    <h3>Combiner 2 cartes</h3>
+    <label for="combine_one">Carte 1</label> 
+    <input class="input" type="text" id="combine_one" name="combine_one" required
+minlength="1" maxlength="5" size="10">
+    <label for="combine_two">Carte 2</label> 
+    <input class="input" type="text" id="combine_two" name="combine_two" required
+    minlength="1" maxlength="5" size="10">
+<input type="submit" class="btn btn-success" value="OK">
+</form>
+
+{# <form action="/cards/save" method="POST">
+<button type="submit" class="btn btn-success" id="save" name="save">Sauvegarder la partie</button>
+</form> #}
+</body>
+</html>

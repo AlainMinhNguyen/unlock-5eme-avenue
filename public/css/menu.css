@@ -1,0 +1,62 @@
+@-webkit-keyframes fondu {
+  from {
+    -webkit-backdrop-filter: brightness(100%);
+            backdrop-filter: brightness(100%);
+  }
+  to {
+    -webkit-backdrop-filter: brightness(50%);
+            backdrop-filter: brightness(50%);
+  }
+}
+@keyframes fondu {
+  from {
+    -webkit-backdrop-filter: brightness(100%);
+            backdrop-filter: brightness(100%);
+  }
+  to {
+    -webkit-backdrop-filter: brightness(50%);
+            backdrop-filter: brightness(50%);
+  }
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../template-images/background.png");
+  -webkit-backdrop-filter: brightness(50%);
+          backdrop-filter: brightness(50%);
+  -webkit-animation: fondu 2s;
+          animation: fondu 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#CinqeA {
+  content: url("../template-images/5eavenue.png");
+  width: auto;
+  height: 100%;
+}
+
+.CinqeAC {
+  width: auto;
+  height: 100%;
+}
+
+#form-container {
+  width: 35%;
+  padding-right: 5%;
+}
+
+.giant-font {
+  font-size: 3em;
+}
+
+.giant-button {
+  font-size: 2em;
+  width: 10em;
+  height: 4em;
+  box-shadow: 5px 5px 5px black;
+}/*# sourceMappingURL=menu.css.map */
